@@ -20,21 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "3";
-
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`); //هنا تسجيل بسيط بالكونسل
-  client.user.setStatus('idle')// هنا التغيير 
-});
-
-
-client.on('ready', () => {
-    console.log(`${client.user.tag} Is idle !`) 
-    client.user.setGame(` ! Hydrogen . 3help`)
-});
-
-
+const prefix = "d";
 /////////////////////////
 ////////////////////////
 
@@ -327,10 +313,10 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '3help') {
+    if (message.content === 'dhelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
+        .setDescription('**برفكس البوت (d)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -357,4 +343,3 @@ client.on('message', message => {
 });
 
 client.login(process.env.BOT_TOKEN);
-
